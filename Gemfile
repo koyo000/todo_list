@@ -5,6 +5,8 @@ ruby '2.6.3'
 # Bootstrap4 and jQuery
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+# manage sort order
+gem 'acts_as_list', '~> 0.9.19'
 
 # devise
 gem 'devise', '~> 4.2'
