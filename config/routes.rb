@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tags
   #resources :todos
       # /goals/:goal_id/todos/:id/sort というURLに対して
       # todos#sort というアクションを割り当てる
