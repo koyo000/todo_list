@@ -6,5 +6,10 @@ class User < ApplicationRecord
          
   has_many :goals
   has_many :tags
+  
+  def available_tags
+    self.tags.select(&:persisted?)
+  end
+
 
 end

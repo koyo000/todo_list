@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_03_072406) do
+ActiveRecord::Schema.define(version: 2023_06_04_011111) do
 
   create_table "goals", force: :cascade do |t|
     t.string "title"
@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(version: 2023_06_03_072406) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_tags_on_user_id"
+  end
+
+  create_table "todo_tags", force: :cascade do |t|
+    t.integer "todo_id"
+    t.integer "tag_id"
+    t.index ["tag_id"], name: "index_todo_tags_on_tag_id"
+    t.index ["todo_id"], name: "index_todo_tags_on_todo_id"
   end
 
   create_table "todos", force: :cascade do |t|
